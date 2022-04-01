@@ -1,17 +1,21 @@
 {
   "name": "cours-js-2023",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "code-style": "xo"
+    "code-style": "xo",
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "ramda": "^0.28.0"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "gulp": "^4.0.2",
+    "mocha": "^9.2.2",
     "xo": "^0.48.0"
   },
   "xo": {
@@ -21,7 +25,7 @@
       "unicorn/no-fn-reference-in-iterator": 0,
       "unicorn/no-array-callback-reference": 0,
       "unicorn/no-array-method-this-argument": 0,
-      "unicorn/no-reduce": 0
+      "unicorn/no-array-reduce": 0
     },
     "envs": [
       "mocha"

@@ -5,8 +5,7 @@ const formatLastName_ = R.pipe(R.prop('lastname'), R.toUpper);
 
 const formatName_ = R.pipe(
   R.juxt([formatFirstName_, formatLastName_]),
-  R.insert(1, ' '),
-  R.reduce(R.concat, '')
+  R.join(' ')
 );
 
 const assocNameAndRemoveFirstnameAndLastName = R.pipe(

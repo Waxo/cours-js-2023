@@ -1,6 +1,11 @@
 import * as R from 'ramda';
 
-const handleMinutes_ = R.pipe(R.head, R.multiply(60));
+const hasMinutes_ = R.pipe(R.length, R.lt(1));
+const handleMinutes_ = R.ifElse(
+  hasMinutes_,
+  R.pipe(R.head, R.multiply(60)),
+  R.always(0)
+);
 const handleSeconds_ = R.last;
 
 const parseTimeToSeconds = R.pipe(
