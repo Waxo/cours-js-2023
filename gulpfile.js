@@ -20,8 +20,6 @@ const stop = async () => {
   }
 };
 
-// yarn add --dev mocha chai
-
 const defaultRun = series(start, watcher);
 
 export default defaultRun;

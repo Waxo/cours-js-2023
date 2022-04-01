@@ -5,14 +5,13 @@ describe('app/time-tools.js', () => {
   describe('#parseTimeToSeconds()', () => {
     it('should return time with minutes and seconds as second in number', () => {
       expect(parseTimeToSeconds('30.12')).to.be.equal(30.12);
-      expect(parseTimeToSeconds('1:30.12')).to.be.equal(91.12);
-      // expect(parseTimeToSeconds('1:15:30.12')).to.be.equal(4530.12);
+      expect(parseTimeToSeconds('1:30.12')).to.be.equal(90.12);
     });
 
     it.skip('should return an error', () => {
-      // expect(parseTimeToSeconds('nono')).to.be.equal(Number.NaN);
-      // expect(parseTimeToSeconds('aze')).to.be.equal(Number.NaN);
-      // expect(parseTimeToSeconds('')).to.be.equal(Number.NaN);
+      expect(parseTimeToSeconds('nono')).to.be.equal(Number.NaN);
+      expect(parseTimeToSeconds('aze')).to.be.equal(Number.NaN);
+      expect(parseTimeToSeconds('')).to.be.equal(Number.NaN);
     });
   });
 
